@@ -1,0 +1,52 @@
+guy_lutsker
+207029448
+Guy Lutsker
+
+arnavy
+308240597
+eran eben chaime
+
+=============================
+=
+= README for ex12: there are 4 code files in this ex
+=
+=============================
+
+this ex is our game of 4 in a row.
+our game is styled based on Heroes of might and magic 2
+
+our game consists of these 4 main parts:
+
+the game logic, game.py:
+this class will handle the entire logic of the game 4 in a row.
+it will handle the board generation, the turn logic, the game status function..
+this class will generate a 6 by 7 board, on witch players 1 and 2 can place pegs
+in order to win the game. this class will check the sequences that are
+generated each turn and decide if the game has been won.
+
+the game graphics, graphics.py:
+this class will import logic from game and AI(and of course tkinter) and
+generate a visual representation of the game for the user.
+in this class we have generated an opening screen in witch the user can decide
+the number of human players and AI player(up to 2).
+when the "GO!" button is pressed the game can be started.
+when the game has ended, the game will show a message of who has won(or a tie),
+and the user if shifted into the main menu where they can choose whether to play
+another game or quit.
+
+the AI part, ai.py:
+this game also has an option to play against an AI.
+the way we chose to implement AI in this game is to use the MinMax approach.
+we used recursion to calculate several moves ahead (changes throughout the
+game play), and by summing up several calculated scores by their predicted game
+state we have generated an AI that is pretty capable :)
+
+our AI has several stages of calculation that are monitored by the timeout -
+first we calculate a random move, and then the ai tries to calculate several moves ahead,
+and then even more.. as the computer has more time to calculate it will dive deeper into
+recursion to calculate a better move.
+
+the four_in_a_row.py:
+a hollow shell, just initialize graphics and run the game through it.
+it only takes care of rerunning a new instance,
+so the player will choose if to play another game or not.
