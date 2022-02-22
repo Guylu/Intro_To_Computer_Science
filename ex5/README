@@ -1,0 +1,112 @@
+guy_lutsker
+207029448
+Guy Lutsker
+
+=============================
+=
+= README for ex5: there are 2 programs in this file.
+=
+=============================
+
+this program will receive form the command line 4 arguments:
+1) a path for a file containing a list of word separated by "\n"
+2) a path for a file containing a matrix of letters separated by "," and "\n"
+3) a path for a file to contain the results(will be explained later)
+4) a list(string actually) of directions to search in(will be explained later)
+
+##############################################################################
+NOTE: i have built this code in a modular way, as to handle all use cases-all
+ search directions in a single function - the code will dynamically adapt for
+ the different direction.
+
+ I am aware though, that it might make the code a bit hard to read, so i
+ documented all of the explanations in the code,
+ thank you for understanding :)
+##############################################################################
+
+the code for the file word_search.py includes the following functions:
+
+run_puzzle: receives the 4 argument from the command line, and run the entire
+program!
+
+write_output_file: receives results, output filename. and saves the results in
+ the path given(if doesnt exists then it creates it.
+
+find_words_in_matrix: receives word_list, matrix, directions. and for the
+entire list of word, will look in all directions set in the var directions to
+find them in the matrix - will combine the results in tuple and return them
+
+lines_checker: receives word, matrix, direction. given a certain direction
+this function will look for the word in the matrix in all the possible "lines"
+of the matrix.
+vals_for_loop: receives the word length, the matrix lengths, and the direction
+- will set the parameters of the loop for the search - return these values.
+
+match: receives - word, matrix, row_index, column_index, direction. and will
+search for a given index in the matrix for the word - return 1 if found.
+
+read_matrix_file: receives filename, and will convert a file into a nested
+list - matrix.
+
+read_wordlist_file : receives filename, and will convert a file into list.
+
+check_input_args: receives the argument from the command line, and check if
+they are valid - if not, will return am error message.
+
+########################################################
+
+the code for the file check_word_search.py includes the following functions:
+
+lines_checker_checker:
+this file tests the function lines_checker with these different inputs:
+
+series 1 of tests: - this test runs on the included mat.txt file
+    matrix = read_matrix_file("mat.txt")
+    tests[0] = lines_checker("aaa", matrix, "u") == 0
+this is a simple not interesting test just to see that the programs runs
+correctly on a simple case :)
+
+series 2 of tests: - this test runs on mat2.txt
+tests[1] = lines_checker("bob", matrix, "u") == \
+           lines_checker("bob", matrix, "d") == 4
+tests[2] = lines_checker("bob", matrix, "l") == \
+           lines_checker("bob", matrix, "r") == 2
+tests[3] = lines_checker("bob", matrix, "z") == \
+           lines_checker("bob", matrix, "w") == 2
+tests[4] = lines_checker("bob", matrix, "x") == \
+           lines_checker("bob", matrix, "y") == 1
+series of test to check words that can be read from both direction - should
+have same number of instances in opposite directions.i also check that my
+function can identify them for the correct number of times - and also
+ to check that the function works symmetrically(important to check that the
+ dynamic loop values are correct in all cases. -
+
+
+
+series 3 of tests: - this test runs on mat3.txt
+tests[5] = lines_checker("aaa", matrix, "r") == \
+           lines_checker("aaa", matrix, "l") == 18
+tests[6] = lines_checker("aaa", matrix, "u") == \
+           lines_checker("aaa", matrix, "d") == 20
+tests[7] = lines_checker("aaa", matrix, "x") == \
+           lines_checker("aaa", matrix, "y") == \
+           lines_checker("aaa", matrix, "z") == \
+           lines_checker("aaa", matrix, "w") == 12
+
+this series is focused on edge cases, where a word will appear in all
+different indexes of the matrix - has to be able to check all of them
+correctly.
+
+series 4 of tests: - this test runs on mat4.txt
+tests[8] = lines_checker("bobcat", matrix, "l") == \
+           lines_checker("cat", matrix, "l") == 1 and \
+           lines_checker("bob", matrix, "l") == \
+           lines_checker("bob", matrix, "r") == 4
+tests[9] = lines_checker("atacbobobobob"[::-1], matrix, "l") == \
+           lines_checker("atacbobobobob", matrix, "r") == 1
+
+this series of tests will check a couple of things, it will check that words
+that can contain other word will appear - "bobcat" should be counted as
+bobcat,1 bob,1 cat,1.
+will also check that a word that fills an entire line will be checked
+correctly.

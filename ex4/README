@@ -1,0 +1,66 @@
+guy_lutsker
+207029448
+Guy Lutsker
+
+=============================
+=
+= README for ex4: there are 2 programs in this file.
+=
+=============================
+
+
+program number 1 is hangman:
+* should be noted that the program is executed with the help of the imported
+libraries PIL, hangman_helper
+
+this program executes the game hangman with functions such as:
+
+update_word_pattern - witch gets a word, a pattern and letter and updates the
+given pattern.
+
+run_single_game - runs a single instance of the game hangman
+
+the program also has a "smart" feature that can give a hint as to a letter
+the user should input. That part is done with the help of functions such as:
+
+filter_words - a function that get a list of words, a pattern, and a list of
+wrong guesses, and returns a new list containing only words that can match the
+pattern and the previous guesses.
+
+choose_letter - a function that gets a list of words, and returns the letter
+that has the most instances in the list.
+
+has_wrong_letter - checks whether a word contains a letter from the wrong
+guesses list.
+========================================================================
+section C - q1:
+
+program number 2 is check_update_word_pattern:
+function that checks the whether the function check_update_word_pattern works
+correctly.
+
+the inputs are:
+to check if a long word with only 1 letter will work:
+    1) update_word_pattern("aaaaaaa", "_______", "a") == "aaaaaaa"
+to check if an empty word will work:
+    2) update_word_pattern("", "", "") == ""
+to check if the char "_" will confuse it:
+    3) update_word_pattern("___", "___", "_") == "___"
+to check if number will confuse it:
+    4) update_word_pattern("123", "_2_", "1") == "12_"
+to see if multiple instances of a letter in a complex(several other
+letters) will confuse it:
+    5) update_word_pattern("abcabcabc", "_________", "a") == "a__a__a__"
+to see if a single letter word will confuse it
+    6) update_word_pattern("a", "_", "a") == "a"
+
+========================================================================
+
+
+section C - q2:
+To make the game work in hebrew, we would have to
+change the value of ALPHABET to 22 and CHAR_A to be the ascii value of ALEF
+and check that it would be consistent until TAF
+
+
+

@@ -1,0 +1,33 @@
+guy_lutsker
+207029448
+Guy Lutsker
+
+i discussed this ex with eran eben chaime
+=============================
+=
+= README for ex8: there is 1 programs in this file - ex8
+=
+=============================
+this file has several function:
+the sudoku game: a function that will play the game sudoku for a given board
+(two dimensional array).
+with these function :
+
+solve_sudoku - main function to run the game
+
+find_unsolved_digit - this function will create a dict to tell how many
+digits are left to fill in a given board - to know how many have been filled
+out, and to not try to guess them in the backtracking.
+
+recursive_placer - this function will actually place the "guesses" into the
+board.
+
+valid_placement - checks if the guess we placed is valid in the sudoku
+
+=====
+
+also there are function for calculating subsets of n k number:
+
+print_k_subsets
+fill_k_subsets
+return_k_subsets

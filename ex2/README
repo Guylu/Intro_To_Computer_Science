@@ -1,0 +1,41 @@
+guy_lutsker
+207029448
+Guy Lutsker
+
+=============================
+=
+= README for ex2: there are 7 programs in this file.
+=
+=============================
+
+
+
+1. convert_spoon_to_cup: a program that receives number of spoons to convert to cups.
+    conversion factor:1/16
+
+2. calculate_mathematical_expression: a program the given an mathematical_expression with an operation
+   in it, will calculate the result and return it
+
+3. largest_and_smallest: this program gets 3 numbers, and returns the largest one, followed by
+    the smallest one
+	i discussed this function with:
+	talia nir
+	eran eben chaime
+
+4. quadratic_eqation:the user chooses 3 number witch describe a quadratic equation = ax^2 +bx + c, 
+   and returns the 0/1/2 solutions(0 solutions return None, 1 solution returns a number, None)
+
+5.shapes:  multi choice program, the user inputs a number to represtnt a shape, and returns the area
+
+6.temperature: a program that given 1 verge temperature to test against 3 recorded temperatures,
+  returns whether or not the next day should be sunny- true\false.
+
+7. test_largest_and_smallest: tests 4 sets of 3 number againts the function "largest_and_smallest: "(num3)
+i chose these tests:
+	a. (0, 10, 3), to see how it will handle 0
+	b. (1, -1, 3), to see how it will handle a negative number
+	c. (0.1, 10, 99.1), to see how it will handle a float tyoe variable
+	d. (0.00000000009, 2, 9999999999), to see how it will handle a very large number
+
+   
+   

@@ -1,0 +1,69 @@
+guy_lutsker
+207029448
+Guy Lutsker
+
+=============================
+=
+= README for ex3: there are 9 programs in this file.
+=
+=============================
+
+
+
+1. input_list: function witch gets an input of strings and returns a
+list of all the strings.
+
+2. concat_list: a function that recieves a list of strings, and returns a
+concatenated string of all the strings from the list.
+
+3. maximum: a function that gets a list of numbers, and returns the largest
+
+4.cyclic: gets 2 lists, and checks whether or not they are cyclic versions of
+each other. returns true of false.
+
+5. seven_boom: gets a number, and generates a list containig the result of the 
+game "seven boom"
+
+6. histogram: gets a number n, and a list of numbers. returns a list containig
+their histogram.
+
+7. prime_factors: gets a number, and returns a list with all of the prime
+factors of that 
+number
+
+8. cartesian: gets 2 lists, and returns a list with their cartesian
+multiplication.
+
+9. pairs: gets a list of numbers and a number n. returns a list with all
+the pairs summing to the number n.
+
+
+==================================================================
+another file:
+
+check_maximum: tests different values to if the function maximum works
+correctly.
+
+the test are:
+tests 0:  maximum([1, 2, 3]) == 3  # test a normal input
+tests 1:  maximum([-4, 2, 3]) == 3  # test with a negative number
+tests 2:  maximum([]) == None # tests an empty list
+tests 3:  maximum([4.5, 2, 3]) == 4.5 # test with a float
+tests 4:  maximum([3, 3, 3]) == 3  # test when all number in list
+are the same
+tests 5:  maximum([0, 3, 4]) == 4  # test with a zero in the list
+
+==========================================================
+
+part 5: theoretical questions:
+1. it won't run, since the function expects lists type, and it gets integers.
+2. returns 0: the program expects a natural number(or 0) and so the default
+maximum is set at 0.. non of the values set here are larger than 0.
+3. the program will crash since it expects a list with number, and when it
+tries to do math operation with a string, it will fail.
+4. the program will fail because the length of the list is larger than 
+the number given(n). the index will be out of bounds.
+5.return an empty list[]- no factos for 0.
+6. it will return - [[0, 2], [1, 1]] - the correct answer :)  hopefully?
+
+   

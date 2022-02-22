@@ -1,0 +1,32 @@
+guy_lutsker
+207029448
+Guy Lutsker
+
+=============================
+=
+= README for ex9: there is 1 program in this file, spilt into 5 files
+=
+=============================
+
+this ex will play the game rush hour, using OOP.
+
+the files are =
+1.car_config_json - a json file with all instructions for cars in the board -
+their location, length, name...
+
+2.helper - file to load the information from the json file
+
+3.car - handles the operations of the cars in the game - handles their,
+placement, their coordinates, possible moves etc..
+
+4.board - handles the board of the game - will initialize the board to place the
+cars in it, will calculate the possible moves, decide the target place for
+wining the game, can also add new cars to the board, and handles the logic of
+valid cars. the board can also move the cars in valid directions.
+the class will also handle the logic of checking is the game if won.
+
+5. game - this is the main class, will handle using all the other classes to
+play the game like needed. will play a single instance of the game and keep
+doing it while the game hasn't been won.
+
+
