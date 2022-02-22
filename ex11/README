@@ -1,0 +1,46 @@
+guy_lutsker
+207029448
+Guy Lutsker
+
+=============================
+=
+= README for ex11: there is 1 program in this file.
+=
+=============================
+
+this ex will generate decision trees, and will play doctor to diagnose
+illnesses:)
+
+this ex will use a tree built with nodes, and will consist if the class
+diagnoser the class has the following functions:
+
+diagnose(self, symptoms):
+given symptoms this func will diagnose an illness with the decision tree
+
+calculate_success_rate(self, records):
+will calculate how many times the decision tree has preformed successfully
+
+all_illnesses(self):
+will return a list of all the illnesses sorted by num of appearances
+
+all_illnesses_helper(self, node, illnesses):
+will create a dict - {["illness"] = #appearances in tree
+
+most_rare_illness(self, records):
+will return the most rare illness the tree
+
+paths_to_illness(self, illness):
+will receive an illness and return the path to get to it
+
+build_tree(records, symptoms):
+will build a decision tree with the given records and symptoms
+
+optimal_tree(records, symptoms, depth):
+will create the optimal tree given a depth
+
+with all of those functions we can diagnose certain illnesses with records of
+symptoms
+
+
+
+

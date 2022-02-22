@@ -1,0 +1,47 @@
+guy_lutsker
+207029448
+Guy Lutsker
+
+=============================
+=
+= README for ex10: there is 1 program in this file, spilt into 5 files
+=
+=============================
+
+this ex will play the game Asteroids, using OOP.
+
+this game will consist of a game loop that checks every iteration that certain
+action have been taken.
+
+for instance - draw the items in the screen for example, the ship, the
+asteroids, the torpedos..
+
+there are also function to handle movement of the object and to update them.
+
+this loop also handles collisions between objects in the game.
+
+question part:
+1. we have decided to design this program with inheretance in mind. since we
+notinedthat the classes for the different objects are very similar, we 
+decided to construct a main class that will be generic with all of the 
+function that are shared between the different objects on the screen - 
+and so they all inheret whatever they need and customize them in their
+own classes.
+we could have just made classes for every single object but it would have been incredibly repetitive, and where's the fun in that? :)
+
+2. move_object - a function that handles movement on the screen for a given
+object - can dynamically move every object without depending on the type of the
+object. this helped us with the design if the code.
+we could have made a single function for each movement but it would have been
+more wasteful and repetitive.
+
+3.teleportation - uses a helper function - teleportation_location_valid to check
+if a location is intersected with an asteroid. it uses as a validation factor
+to know if it is possible to teleport to that location- if it is invalid it
+continues the loop in teleportation func.
+we could have made several complicated nested loops to check is a teleportation
+site is valid but it would have been much more complicated to implement and we
+decided it would be better to do it in a separated function.
+
+
+
